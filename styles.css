@@ -1,0 +1,14 @@
+nav {
+    text-align: center;
+}
+
+body {
+    max-width: 700px;
+    margin: auto;
+}
+
+.icons img {
+    max-width: 30px;
+    padding: 3px;
+    height: auto;
+}
