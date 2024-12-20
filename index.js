@@ -1,7 +1,18 @@
 const spanishTranslations = {
     introduction: "Me llamo",
     title: "CS @ Purdue, aspirante a desarollador de software",
-    button: "English"
+    button: "English",
+    aboutMe : "Acerca de mí",
+    aboutMep1: "Soy de Huntingburg, Indiana, y esudio la informática en la universidad de Purdue." +
+        "Despues de graduarme, mi plan es para trabajar como desarollador de software.",
+    aboutMep2: "Aunque soy programadora y entusiasta de la technología, también soy un estudiante" +
+        "de los humanidades.",
+    aboutMep4: "",
+    aboutMep3: "",
+    aboutMep5: "",
+    aboutMep6: "",
+    aboutMep7: "",
+    aboutMep8: "",
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -47,5 +58,14 @@ function switchLang(lang) {
         document.getElementById("intro").innerText = spanishTranslations.introduction;
         document.getElementById("title").innerText = spanishTranslations.title;
         document.getElementById("lang-toggle").innerText = spanishTranslations.button;
+        document.getElementById("about-me").innerText = spanishTranslations.aboutMe;
+        document.getElementById("about-me-p1").innerText = spanishTranslations.aboutMep1;
+        document.getElementById("about-me-p2").innerText = spanishTranslations.aboutMep2;
+        document.getElementById("about-me-p3").innerText = spanishTranslations.aboutMep3;
+        document.getElementById("about-me-p4").innerText = spanishTranslations.aboutMep4;
+        document.getElementById("about-me-p5").innerText = spanishTranslations.aboutMep5;
+        document.getElementById("about-me-p6").innerText = spanishTranslations.aboutMep6;
+        document.getElementById("about-me-p7").innerText = spanishTranslations.aboutMep7;
+        document.getElementById("about-me-p8").innerText = spanishTranslations.aboutMep8;
     }
 }

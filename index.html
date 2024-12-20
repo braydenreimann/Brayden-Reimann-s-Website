@@ -22,7 +22,6 @@
 
 <body>
     <header>
-
         <nav>
             <a href="">braydenreimann.com</a>
             <a href="">About me</a>
@@ -42,29 +41,29 @@
         </div>
     </header>
 
-    <section id="About me">
-        <h2>About me</h2>
-        <p>I'm from Huntingburg, Indiana, and currently study Computer Science at Purdue University. After I graduate,
+    <section>
+        <h2 id="about-me">About me</h2>
+        <p id="about-me-p1">I'm from Huntingburg, Indiana, and currently study Computer Science at Purdue University. After I graduate,
         my plan is to work as a Software Developer.</p>
-            <p>Although I'm a programmer and tech enthusiast, I might be a
+        <p id="about-me-p2">Although I'm a programmer and tech enthusiast, I might be a
         liberal arts student at heart. In addition to major in CS, I'm also pursuing a degree in Spanish, and have
         made contributions to the Purdue Exponent, one of the nation's top student-run collegiate newspapers.</p>
-        <p>Outside of school, I enjoy practicing my Spanish, cooking, traveling, reading (mostly non-fiction), and
+        <p id="about-me-p3">Outside of school, I enjoy practicing my Spanish, cooking, traveling, reading (mostly non-fiction), and
         the occasional bike ride. In 2025, I plan to go on a semester-long study abroad to either Mexico or
         Colombia, where I will continue my studies and hone my working proficiency of Spanish.</p>
-        <p>I am very excited about someday working in the Software Development industry. We are
+        <p id="about-me-p4">I am very excited about someday working in the Software Development industry. We are
         currently amidst a great technological revolution—technologies like generative AI, virtual reality, and
         quantum computing are only in their infancy. It will be a privilege to work with and develop
         these technologies in my career, and I hope to make my own small impact on the future.</p>
-        <p>One of my core philosophies is that good software and products are dependent upon thoughtful,
+        <p id="about-me-p5">One of my core philosophies is that good software and products are dependent upon thoughtful,
         user-oriented engineers. Even the smallest decisions will inevitably affect
         the end user.</p>
-        <p>During an Apple event, Steve Jobs once said, "Technology alone is not enough—that's technology, married with liberal arts...
+        <p id="about-me-p6">During an Apple event, Steve Jobs once said, "Technology alone is not enough—that's technology, married with liberal arts...
         that yields us the result that make our hearts sing."</p>
-        <p>This was Apple's core philosophy, one which I identify with greatly. It's the reason why Apple,
+        <p id="about-me-p7">This was Apple's core philosophy, one which I identify with greatly. It's the reason why Apple,
         and not IBM, HP, or Microsoft, is the world's most successful company. Steve Jobs did not just have an
         engineering perspective, but also a humanistic one.</p>
-        <p>In my career, I hope I can leverage my unique background to create software that embodies this philosophy.</p>
+        <p id="about-me-p8">In my career, I hope I can leverage my unique background to create software that embodies this philosophy.</p>
     </section>
 
     <section id ="Languages and Tools">
@@ -118,10 +117,32 @@
 </section>
 
 <section>
-    <h2>Contact Me</h2>
-    <p>Implement a contact form here.</p>
-    <button id="lang-toggle">Español</button>
-
+    <div class="contact-form-container">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <div class="form-item">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <span class="error-message" id="name-error"></span>
+            </div>
+            <div class="form-item">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <span class="error-message" id="email-error"></span>
+            </div>
+            <div class="form-item">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+                <span class="error-message" id="phone-error"></span>
+            </div>
+            <div class="form-item">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
+                <span class="error-message" id="message-error"></span>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
 </section>
 
 </body>

@@ -3,21 +3,75 @@ nav {
 }
 
 body {
+    font-family: "Nunito Sans", serif;
     max-width: 700px;
     margin: auto;
-    padding-top: 50px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 25px;
+}
+
+/* Styling for the contact form */
+.contact-form-container {
+    padding: 20px;
+    box-shadow: 0 4px 8px slategrey;
+    max-width: 700px;
+}
+
+.contact-form-container h2 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.form-item {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea {
+    font-size: 1rem;
+    padding: 0.8rem;
+    border: 1px solid slategrey;
+    border-radius: 4px;
+    box-sizing: border-box;     /* rounds the corners */
+    width: 100%;                /* fill the entire container */
+}
+
+textarea {
+    font-family: "Nunito Sans", serif;
+    resize: vertical;
+    min-height: 3rem;
+    overflow: hidden;
+}
+
+.error-message {
+    color: indianred;
+    font-size: 0.875rem;
+    display: none;
+}
+
+.submit-button {
+    background-color: dodgerblue;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 4px;
+    border-color: slategrey;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: midnightblue;
 }
 
 .introduction p {
-    font-size: medium;
     margin-bottom: 0;
 }
 
 .introduction h1 {
     margin-top: 0;
-    font-size: xx-large;
     margin-bottom: 5px;
 }
 
@@ -27,10 +81,6 @@ body {
 
 section {
     margin: 50px 0 50px 0;
-}
-
-p, a {
-    font-family: "Nunito Sans", serif;
 }
 
 h1, h2, h3, h4 {
