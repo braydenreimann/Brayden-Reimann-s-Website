@@ -69,3 +69,12 @@ function switchLang(lang) {
         document.getElementById("about-me-p8").innerText = spanishTranslations.aboutMep8;
     }
 }
+
+/*
+document.getElementById("contact-form").addEventListener("submit", () => {
+    // Get form values
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const message = document.getElementById("message").value.trim();
+}*/

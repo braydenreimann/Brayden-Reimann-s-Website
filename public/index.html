@@ -119,7 +119,7 @@
 <section>
     <div class="contact-form-container">
         <h2>Contact Me</h2>
-        <form id="contact-form">
+        <form id="contact-form" method="POST" action="/api/submit" enctype="multipart/form-data">
             <div class="form-item">
                 <label for="name">Name</label>
                 <input type="text" id="name" placeholder="Your Name" required>
