@@ -60,6 +60,39 @@ h1, h2, h3, h4 {
     height: auto;
 }
 
+.board {
+    display: grid;
+    margin: auto;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0px;
+    width: 60%;
+}
+
+.board div {
+    display: flex;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+}
+
+.crystal-button {
+    margin: 0;
+    padding: 0;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    border-radius: 10px;
+    border: none;
+    background-color: -moz-default-background-color;
+}
+
+.game-info {
+    text-align: center;
+    margin: 2em 0 1em 0;
+}
+
+
 /*!* Styling for the contact form *!
 .contact-form-container {
     padding: 20px;
