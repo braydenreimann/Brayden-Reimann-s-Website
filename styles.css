@@ -112,6 +112,10 @@ button {
     margin-bottom: 8em;
 }
 
+footer {
+    margin-top: 200px;
+}
+
 
 /*!* Styling for the contact form *!
 .contact-form-container {
