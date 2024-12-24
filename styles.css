@@ -41,7 +41,7 @@ body {
 }
 
 section {
-    margin: 50px 0 50px 0;
+    margin: 50px 0 70px 0;
 }
 
 .contact-section-container p {
@@ -100,11 +100,16 @@ button {
     padding: 0.75rem;
     border-color: slategrey;
     border-radius: 10px;
-    cursor: pointer;
 }
 
-#play-again-button {
-    background-color: mediumseagreen;
+#play-again-button:not([hidden]) {
+    margin: 2em auto 0 auto;
+    display: block;
+    background-color: seagreen;
+}
+
+#my-favorite-songs {
+    margin-bottom: 8em;
 }
 
 
