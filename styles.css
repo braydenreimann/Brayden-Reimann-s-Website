@@ -23,35 +23,43 @@ body {
     color: white;
 }
 
-#introduction {
-    display: inline-block;
+.introduction {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+    background-color: cornsilk;
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px black dashed;
+    box-shadow: 12px 12px 2px 1px lightgrey;
 }
 
-#name-title-socials-section {
-    max-width: 200px;
+
+#intro {
+    margin: 0;
 }
 
-#braden-reimann-headshot {
+#name {
+    margin: 0 0 0.5rem;
+}
+
+#title {
+    margin: 0.5rem 0 1rem 0;
+}
+
+
+#headshot {
     border-radius: 50%;
-    max-width: 150px;
+    width: 150px;
+    height: 150px;
 }
 
 .navbar:hover {
     background-color: midnightblue;
 }
 
-.introduction p {
-    margin-bottom: 0;
-}
 
-.introduction h1 {
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.introduction h3 {
-    margin-top: 0;
-}
 
 section {
     margin: 50px 0 70px 0;
@@ -77,7 +85,7 @@ h1, h2, h3, h4 {
     display: grid;
     margin: auto;
     grid-template-columns: auto auto auto;
-    grid-gap: 0px;
+    grid-gap: 0;
     width: 60%;
 }
 
@@ -136,6 +144,7 @@ footer {
     margin: 10px;
     padding: 10px;
     flex: 1;
+    flex-grow: 0;
 }
 
 .item h4 {
@@ -144,6 +153,7 @@ footer {
     text-overflow: ellipsis;
     margin-bottom: 0.5em;
     width: 100%;
+    font-size: 14px;
 }
 
 .item p {
