@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Get the user's preferred language
     const preferredLang = navigator.language;
     if (preferredLang.charAt(0) === 'e' && preferredLang.charAt(1) === 's') {
-        window.location.href = "braydenreimann.com/es"
+        window.location.href = "https://braydenreimann.com/es/"
     }
 
     // Create a new HTMLAudioElement to manage and play audio
