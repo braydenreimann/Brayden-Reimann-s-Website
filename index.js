@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const langCheck = localStorage.getItem("langCheck");
     const isEnglish = (document.documentElement.lang === "en");
 
-    //if (langCheck === null) {
+    if (langCheck !== "1") {
         const preferredLang = navigator.language;
         let preferSpanish = false;
         if (preferredLang.charAt(0) === 'e' && preferredLang.charAt(1) === 's') {
@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
         // Switch to the Spanish version of the site
         if (isEnglish && preferSpanish) {
             window.location.href = "https://braydenreimann.com/es/"
-            //localStorage.setItem("langCheck", "true");
+            localStorage.setItem("langCheck", "1");
         }
-    //}
+    }
 
     // Create a new HTMLAudioElement to manage and play audio
     const menuSelectSF = new Audio("Media/Audio/menu-select.wav");
