@@ -1,11 +1,11 @@
-let langCheck = false;
-
 // Event listener to ensure page elements have loaded
 document.addEventListener("DOMContentLoaded", () => {
     const isEnglish = (document.documentElement.lang === "en");
 
     // Get the user's preferred language
-    if (!langCheck) {
+    const langCheck = localStorage.getItem("langCheck");
+
+    if (langCheck === null) {
         const preferredLang = navigator.language;
         let preferSpanish = false;
         if (preferredLang.charAt(0) === 'e' && preferredLang.charAt(1) === 's') {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Switch to the Spanish version of the site
         if (isEnglish && preferSpanish) {
             window.location.href = "https://braydenreimann.com/es/"
-            langCheck = true;
+            localStorage.setItem("langCheck", "true");
         }
     }
 
