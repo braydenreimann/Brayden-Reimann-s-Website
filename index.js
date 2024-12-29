@@ -1,25 +1,24 @@
-// Event listener to ensure page elements have loaded
-document.addEventListener("DOMContentLoaded", () => {
-    const isEnglish = (document.documentElement.lang === "en");
+// Get the user's preferred language
+const langCheck = localStorage.getItem("langCheck");
+const isEnglish = (document.documentElement.lang === "en");
 
-    // Get the user's preferred language
-    const langCheck = localStorage.getItem("langCheck");
-
-    if (langCheck === null) {
-        console.log("langCheck === null");
-        const preferredLang = navigator.language;
-        let preferSpanish = false;
-        if (preferredLang.charAt(0) === 'e' && preferredLang.charAt(1) === 's') {
-            preferSpanish = true;
-        }
-
-        // Switch to the Spanish version of the site
-        if (isEnglish && preferSpanish) {
-            window.location.href = "https://braydenreimann.com/es/"
-            localStorage.setItem("langCheck", "true");
-        }
+if (langCheck === null) {
+    const preferredLang = navigator.language;
+    let preferSpanish = false;
+    if (preferredLang.charAt(0) === 'e' && preferredLang.charAt(1) === 's') {
+        preferSpanish = true;
     }
 
+    // Switch to the Spanish version of the site
+    if (isEnglish && preferSpanish) {
+        window.location.href = "https://braydenreimann.com/es/"
+        localStorage.setItem("langCheck", "true");
+    }
+}
+
+
+// Event listener to ensure page elements have loaded
+document.addEventListener("DOMContentLoaded", () => {
     // Create a new HTMLAudioElement to manage and play audio
     const menuSelectSF = new Audio("Media/Audio/menu-select.wav");
     const youWonSF = new Audio("Media/Audio/you-won.wav");
