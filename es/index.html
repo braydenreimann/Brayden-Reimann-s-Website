@@ -3,119 +3,141 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Brayden Reimann - Aspiring Software Developer</title>
-    <script src="index.js"></script>
+    <meta content="width=device-width" name="viewport">
+    <title>Brayden Reimann - Aspirante a desarollador de software</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <!--Links to the CSS and Javascript files-->
+    <link href="../styles.css" rel="stylesheet">
+    <script src="../index.js"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!--Alternate site version (es)-->
+    <link href="https://braydenreimann.com/es/" hreflang="es" rel="alternate">
 
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
-    <header>
-
+<header>
+    <!--Navigation bar-->
+    <div class="navbar">
         <nav>
-            <a href="">braydenreimann.com</a>
-            <a href="">About me</a>
-            <a href="#Projects">Projects</a>
-            <a href="">Articles</a>
-            <a href="">LinkedIn</a>
+            <a href="">Inicio</a>
+            <a href="#about-me">Sobre mi</a>
+            <a href="#projects">Proyectos</a>
+            <a href="fun.html">Diversión</a>
+            <a href="https://www.purdueexponent.org/search/?tncms_csrf_token=04f54da2b38977f742b2800a059a966ed2699677da69d77053370ccf621c9a8c.395a5a30b414cfaebc6e&l=25&s=start_time&sd=desc&nfl=ap&f=html&t=article%2Cvideo%2Cyoutube%2Ccollection&app=editorial&nsa=eedition&q=Brayden+Reimann">Artículos</a>
         </nav>
+    </div>
 
-        <div class="introduction">
-            <p>Hola, soy</p>
-            <h1>Brayden Reimann.</h1>
-            <h3>CS @ Purdue, aspiring Software Developer</h3>
+    <div class="introduction">
+        <div class="name-title-socials-section">
+            <p id="intro">Hola, soy</p>
+            <h1 id="name">Brayden Reimann.</h1>
+            <h3 id="title">CS @ Purdue, aspirante a desarollador de software</h3>
+            <link rel="icon" type="image/png" href="../Media/images/favicon.png">
             <div class="icons">
-                <a href="https://github.com/braydenreimann"> <img src="Media/Socials/github.png" alt="Github Logo"></a>
-                <a href="https://www.linkedin.com/in/brayden-reimann-810832189"> <img src="Media/Socials/linkedin.png" alt="LinkedIn Logo"></a>
+                <a href="https://github.com/braydenreimann"> <img alt="Github Logo" src="Media/Socials/github.png"></a>
+                <a href="https://www.linkedin.com/in/brayden-reimann-810832189"> <img alt="LinkedIn Logo" src="Media/Socials/linkedin.png"></a>
             </div>
         </div>
-    </header>
+        <img id="headshot" src="Media/images/thumbnail_headshot.jpg" alt="A photo of Brayden Reimann">
+    </div>
+</header>
 
-    <section id="About me">
-        <h2>About me</h2>
-        <p>I'm from Huntingburg, Indiana, and currently study Computer Science at Purdue University. After I graduate,
-        my plan is to work as a Software Developer.</p>
-            <p>Although I'm a programmer and tech enthusiast, I might be a
-        liberal arts student at heart. In addition to major in CS, I'm also pursuing a degree in Spanish, and have
-        made contributions to the Purdue Exponent, one of the nation's top student-run collegiate newspapers.</p>
-        <p>Outside of school, I enjoy practicing my Spanish, cooking, traveling, reading (mostly non-fiction), and
-        the occasional bike ride. In 2025, I plan to go on a semester-long study abroad to either Mexico or
-        Colombia, where I will continue my studies and hone my working proficiency of Spanish.</p>
-        <p>I am very excited about someday working in the Software Development industry. We are
-        currently amidst a great technological revolution—technologies like generative AI, virtual reality, and
-        quantum computing are only in their infancy. It will be a privilege to work with and develop
-        these technologies in my career, and I hope to make my own small impact on the future.</p>
-        <p>One of my core philosophies is that good software and products are dependent upon thoughtful,
-        user-oriented engineers. Even the smallest decisions will inevitably affect
-        the end user.</p>
-        <p>During an Apple event, Steve Jobs once said, "Technology alone is not enough—that's technology, married with liberal arts...
-        that yields us the result that make our hearts sing."</p>
-        <p>This was Apple's core philosophy, one which I identify with greatly. It's the reason why Apple,
-        and not IBM, HP, or Microsoft, is the world's most successful company. Steve Jobs did not just have an
-        engineering perspective, but also a humanistic one.</p>
-        <p>In my career, I hope I can leverage my unique background to create software that embodies this philosophy.</p>
-    </section>
-
-    <section id ="Languages and Tools">
-    <h2>Languages and Tools</h2>
-        <h4>Languages</h4>
-        <div class="icons">
-<!--            <img src="Media/html.png" alt="HTML Icon">-->
-<!--            <img src="Media/css-3.png" alt="CSS Icon">-->
-<!--            <img src="Media/js.png" alt="Javascript Icon">-->
-            <img src="Media/C_Programming_Language.svg.png" alt="C Programming Language Icon">
-            <img src="Media/asm.png" alt="Assembly Icon">
-            <img src="Media/java.png" alt="Java Icon">
-<!--            <img src="Media/bash.png" alt="Bash Icon">-->
-            <img src="Media/latex.png" alt="Latex Icon">
-        </div>
-        <p>In addition to proficiency in the languages above, I am currently learning HTML, CSS, and
-        Javascript.</p>
-        <p>I don't much experience working with these languages in a production environment; I'm currently in search of
-        a job, internship, or extracurricular activity that will allow me to practice my skills.</p>
-        <h4>Tools</h4>
-        <div class="icons">
-            <img src="Media/fedora.png" alt="Fedora Icon">
-            <img src="Media/intellij.png" alt="IntelliJ Icon">
-            <img src="Media/linux.png" alt="Linux Icon">
-            <img src="Media/macos.png" alt="MacOS Icon">
-            <img src="Media/vim.png" alt="Vim Icon">
-            <img src="Media/webstorm.png" alt="Webstorm Icon">
-            <img src="Media/windows.png" alt="Windows Icon">
-        </div>
-        <p>Yes, I'm crazy—I use Windows, MacOS, <em>and</em> Linux in both personal and academic settings.</p>
-    </section>
-
-<section id="Projects">
-    <h2>Projects</h2>
-    <h4>Implementing Basic Data Structures in C++ (In progress)</h4>
-    <a href="url">Github repository</a>
-
-    <p>In my CS 251 course, students were required to implement various data structures in Java. I plan to implement
-    these same data structures in C++ in my own time. This project will not only help me master these data structures,
-    but it will also teach me the fundamentals of C++.</p>
-
-    <h4>Personal Website</h4>
-    <a href="https://github.com/braydenreimann/Brayden-Reimann-s-Website">Github repository</a>
-
-    <p>I decided to start this project because I wanted to learn how to build a website from the ground-up, using
-    HTML, CSS, and JavaScript. I found myself overwhelmed by the web development stack, so I decided that I would not
-    use any frameworks for this project.</p>
-
-    <p>I learned a lot in the process of creating this website, and I now feel confident enough
-    to use them in a professional setting and on more advanced future projects.</p>
-</section>
+<h4 style="padding-left: 3px;"><a href="../index.html">Inglés</a></h4>
 
 <section>
-    <h2>Contact Me</h2>
-    <p>Implement a contact form here.</p>
-    <button onclick="toSpanish()">Spanish</button>
+    <h2 id="about-me">Sobre mi</h2>
+    <p>Soy de Huntingburg, Indiana y estudio informática en la universidad de Purdue. Después de graduarme, mi plan es trabajar como desarrollador de software.</p>
+    <p>Aunque soy programador y aficionado de la tecnología, también soy apasionado por las humanidades. Junto a mi especialidad en la informática, persigo una especialización en español. Además, soy reportero por el Exponente de Purdue, uno de los mejores periódicos universitarios dirigidos por estudiantes.</p>
+    <pFuera de la escuela, me gusta cocinar, viajar, leer, y pasear en bicicleta. En 2025, voy a estudiar en un país de América Latina, en el cual continuaré mis estudios y perfeccionaré mi competencia en español para el ámbito laboral.</p>
+    <p>Estoy emocionado por trabajar como desarrollador después de graduarme. Estamos en medio de una revolución tecnológica—definida por nuevas tecnologías como IA generativa, computación en la nube y computación espacial.</p>
+    <p>No puedo esperar a desarrollar productos que utilicen estas herramientas y para crear mi propio pequeño impacto en el futuro.</p>
+    <!--
+    <p id="about-me-p5">One of my core philosophies is that good products are dependent upon thoughtful,
+        user-oriented engineers, because even the smallest decisions affect
+        the end user.</p>
+    <p id="about-me-p6">Steve Jobs once said, "Technology alone is not enough—that's technology,
+        married with liberal arts...
+        that yields us the result that make our hearts sing."</p>
+    <p id="about-me-p7">This was Apple's core philosophy, and it's the reason why Apple,
+        and not IBM, HP, or Microsoft, became the world's most successful company.
+
+    <p>It's the reason why I consider to pursue interests outside of those that directly align with my career ambitions.
+        I don't just want to be a good developer, but also a well-rounded one.</p>-->
+    <!--    <p id="about-me-p8">In my career, I hope I can leverage my unique background and these new technologies-->
+    <!--        to create great software.</p>-->
+</section>
+
+<section id="languages-and-tools">
+    <h2>Lenguajes y herramientas</h2>
+    <h3>Lenguajes</h3>
+    <div class="icons">
+        <!--            <img src="Media/html.png" alt="HTML Icon">-->
+        <!--            <img src="Media/css-3.png" alt="CSS Icon">-->
+        <!--            <img src="Media/js.png" alt="Javascript Icon">-->
+        <img alt="C Programming Language Icon" src="Media/Languages/C_Programming_Language.svg.png">
+        <img alt="Assembly Icon" src="Media/Languages/asm.png">
+        <img alt="Java Icon" src="Media/Languages/java.png">
+        <!--            <img src="Media/bash.png" alt="Bash Icon">-->
+        <img alt="Latex Icon" src="Media/Languages/latex.png">
+    </div>
+    <p>Además de mi competencia en las lenguas arribas, estudio HTML, CSS y JavaScript.</p>
+    <p>No tengo mucha experiencia en trabajar con estas lenguas en el ámbito laboral, y por eso busco un trabajo o una pasantía en el que pueda practicar mis habilidades.</p>
+    <h3>Herramientas</h3>
+    <div class="icons">
+        <img alt="Fedora Icon" src="Media/Tools/fedora.png">
+        <img alt="IntelliJ Icon" src="Media/Tools/intellij.png">
+        <img alt="Linux Icon" src="Media/Tools/linux.png">
+        <img alt="MacOS Icon" src="Media/Tools/macos.png">
+        <img alt="Vim Icon" src="Media/Tools/vim.png">
+        <img alt="Webstorm Icon" src="Media/Tools/webstorm.png">
+        <img alt="Windows Icon" src="Media/Tools/windows.png">
+    </div>
+    <p>Estoy bastante familiarizado con las herramientas arribas y siempre busco aprender otras nuevas.</p>
+</section>
+
+<section id="projects">
+    <h2>Proyectos</h2>
+    <div class="project-item">
+        <h3>Implementación de estructuras de datos básicas en C++ (en progreso)</h3>
+        <img class="project-img" src="Media/images/cl_editor_areas.png" alt="CLion Editor Window">
+        <h4><a href="">Repositorio de GitHub</a></h4>
+
+        <p>En mi curso <em>CS 251: Estructuras de datos y los algoritmos</em>, creé varias clases relacionadas con estructuras de datos fundamentales en Java. En este proyecto personal, las implementaré en C++. Esto ampliará mi comprensión de estas estructuras de datos y me enseñará los fundamentos de programación C++.</p>
+    </div>
+
+    <div class="project-item">
+        <h3>Sitio web personal</h3>
+        <img class="project-img" src="Media/images/braydenreimann.com.png" alt="The Cloudflare window for braydenreimann.com">
+        <h4><a href="https://github.com/braydenreimann/Brayden-Reimann-s-Website">Repositorio de GitHub</a></h4>
+
+        <p>Decidí empezar este proyecto porque quería aprender cómo construir un sitio web desde cero con solamente HTML, CSS y JavaScript. Me encontré abrumado por la pila de desarrollo web, y por eso decidí que no usaría ningún framework para construirlo.</p>
+        <p>Aprendí mucho en el proceso de construirlo y ahora tengo confianza en mi habilidad para usar estas herramientas en el ámbito laboral y en proyectos personales más complicados.</p>
+    </div>
+</section>
+
+<!--<section>
+
+</section>-->
+
+<section id="contact">
+    <div class="contact-section-container">
+        <h2>Contáctame</h2>
+        <h4>Estoy disponible por teléfono, correo electrónico o WhatsApp para comunicaciones internacionales.</h4>
+        <p><b>Teléfono: </b>(812) 351-1082</p>
+        <p><b>Correo Electrónico: </b><a href="mailto:contact@braydenreimann.com">contact@braydenreimann.com</a></p>
+        <p><b>WhatsApp: </b>(812) 351-1082</p>
+    </div>
+</section>
+
+<footer>
+    <hr>
+    <p>Este sitio web fue programado a mano por <b>Brayden Reimann</b> &#169 2024. Todos los derechos reservados.</p>
+</footer>
 
 </body>
 </html>

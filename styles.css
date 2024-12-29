@@ -11,7 +11,7 @@ body {
     display: flex;
     justify-content: center;
     max-width: 75%;
-    background-color: dodgerblue;
+    background-color: #219EBC;
     border-radius: 25px;
     border-color: slategrey;
 }
@@ -28,11 +28,10 @@ body {
     align-items: center;
     gap: 40px;
     justify-content: center;
-    background-color: cornsilk;
+    background-color: #8ECAE6;
     border-radius: 15px;
     padding: 20px;
-    border: 2px black dashed;
-    box-shadow: 12px 12px 2px 1px lightgrey;
+    box-shadow: 10px 5px 5px lightgrey;
 }
 
 
@@ -53,7 +52,6 @@ body {
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    border: 2px black solid;
 }
 
 .navbar:hover {
@@ -70,10 +68,30 @@ section {
     margin: 0;
 }
 
-
 h1, h2, h3, h4 {
     font-family: "Rubik", serif;
     font-weight: 500;
+}
+
+h3 {
+    color: #023047;
+}
+
+h4 {
+    color: #FB8500;
+}
+
+.project-img {
+    max-width: 100%;
+    border-radius: 15px;
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    box-shadow: 10px 5px 5px lightgrey;
+}
+
+.project-item {
+    padding-bottom: 2em;
 }
 
 .icons img {
@@ -81,6 +99,17 @@ h1, h2, h3, h4 {
     padding: 3px;
     height: auto;
 }
+
+#language-prompt {
+    float: right;
+}
+
+/*.contact-section-container {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}*/
 
 .board {
     display: grid;

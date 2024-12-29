@@ -1,5 +1,11 @@
 // Event listener to ensure page elements have loaded
 document.addEventListener("DOMContentLoaded", () => {
+    // Get the user's preferred language
+    const preferredLang = navigator.language;
+    if (preferredLang.charAt(0) === 'e' && preferredLang.charAt(1) === 's') {
+        window.location.href = "braydenreimann.com/es"
+    }
+
     // Create a new HTMLAudioElement to manage and play audio
     const menuSelectSF = new Audio("Media/Audio/menu-select.wav");
     const youWonSF = new Audio("Media/Audio/you-won.wav");
