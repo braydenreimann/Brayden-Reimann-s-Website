@@ -1,8 +1,15 @@
 // Event listener to ensure page elements have loaded
 document.addEventListener("DOMContentLoaded", () => {
+    const isEnglish = (document.documentElement.lang === "en");
+
     // Get the user's preferred language
     const preferredLang = navigator.language;
+    var preferSpanish;
     if (preferredLang.charAt(0) === 'e' && preferredLang.charAt(1) === 's') {
+        preferSpanish = true;
+    }
+
+    if (isEnglish && preferSpanish) {
         window.location.href = "https://braydenreimann.com/es/"
     }
 
