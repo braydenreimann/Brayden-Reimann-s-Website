@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const langCheck = localStorage.getItem("langCheck");
 
     if (langCheck === null) {
+        console.log("langCheck === null");
         const preferredLang = navigator.language;
         let preferSpanish = false;
         if (preferredLang.charAt(0) === 'e' && preferredLang.charAt(1) === 's') {
@@ -79,29 +80,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listener for the play again button
     const playAgainButton = document.getElementById("play-again-button");
-    playAgainButton.addEventListener("click", () => {
+    if (playAgainButton) {
+        playAgainButton.addEventListener("click", () => {
 
-        // Reset the game
-        board[0].value = null;
-        board[1].value = null;
-        board[2].value = null;
-        board[3].value = null;
-        board[4].value = null;
-        board[5].value = null;
-        board[6].value = null;
-        board[7].value = null;
-        board[8].value = null;
+            // Reset the game
+            board[0].value = null;
+            board[1].value = null;
+            board[2].value = null;
+            board[3].value = null;
+            board[4].value = null;
+            board[5].value = null;
+            board[6].value = null;
+            board[7].value = null;
+            board[8].value = null;
 
-        spaces.forEach((space, index) => {
-            space.innerHTML = "";
+            spaces.forEach((space, index) => {
+                space.innerHTML = "";
+            })
+
+            isPlaying = true;
+            yourTurn = true;
+
+            playAgainButton.setAttribute("hidden", "hidden");
+            gameInfo.innerHTML = "It's your turn.";
         })
-
-        isPlaying = true;
-        yourTurn = true;
-
-        playAgainButton.setAttribute("hidden", "hidden");
-        gameInfo.innerHTML = "It's your turn.";
-    })
+    }
 
     spaces.forEach((space, index) => {
 
