@@ -1,27 +1,6 @@
 // Event listener to ensure page elements have loaded
 document.addEventListener("DOMContentLoaded", () => {
-    // See if the user is on a mobile device
-    /*function isMobile() {
-        let device = '';
 
-        if (navigator.userAgent.match(/Android/i)
-            || navigator.userAgent.match(/webOS/i)
-            || navigator.userAgent.match(/iPhone/i)
-            || navigator.userAgent.match(/iPad/i)
-            || navigator.userAgent.match(/iPod/i)
-            || navigator.userAgent.match(/BlackBerry/i)
-            || navigator.userAgent.match(/Windows Phone/i)) {
-            device = true;
-        } else {
-            device = false;
-        }
-        return device;
-    }
-
-    if (isMobile() === true) {
-
-    }
-*/
 
     // Get the user's preferred language
     const isEnglish = (document.documentElement.lang === "en");
