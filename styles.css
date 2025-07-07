@@ -27,7 +27,7 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-    justify-content: center;
+    justify-content: left;
     background-color: #8ECAE6;
     border-radius: 15px;
     padding: 20px;
@@ -78,6 +78,10 @@ h3 {
 }
 
 h4 {
+    color: #FB8500;
+}
+
+p b {
     color: #FB8500;
 }
 
