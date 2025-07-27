@@ -3,9 +3,22 @@ body {
     max-width: 700px;
     margin: auto;
     padding: 25px;
+    background-color: #ffffff;
+    color: #000000;
 }
 
-.navbar {
+#body-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.4);
+    z-index: 100;
+    display: none;
+}
+
+.navbar-desktop {
     margin: 0 auto 3rem auto;
     padding: 0.75rem;
     display: flex;
@@ -14,13 +27,68 @@ body {
     background-color: #219EBC;
     border-radius: 25px;
     border-color: slategrey;
+    background-color: midnightblue;
 }
 
-.navbar a {
+.navbar-mobile {
+    margin-bottom: 1rem;
+    z-index: 120;
+}
+
+#navbar-mobile-toggle {
+    background-color: azure;
+    font-size: 24px;
+    border-radius: 15px;
+    z-index: 140;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#navbar-mobile-links {
+    background-color: #FB8500;
+    display: none;
+    position: absolute;
+    border-radius: 15px;
+    font-size: 24px;
+            /* top right bottom left */
+    padding: 2rem 6rem 2rem 2rem;
+    z-index: 120;
+}
+
+#navbar-mobile-links .unordered-list {
+    list-style-type: none;
+    padding: 0px;
+}
+
+#navbar-mobile-links li {
+    margin-bottom: 1rem;
+}
+
+#navbar-mobile-links a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.navbar-desktop a {
     padding-left: 20px;
     padding-right: 20px;
     text-decoration: none;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .navbar-desktop {
+        display: none;
+    }
+    .navbar-mobile {
+        display: block;
+    }
+
+    #navbar-mobile-links {
+        display: none;
+    } 
 }
 
 .introduction {
@@ -53,12 +121,6 @@ body {
     width: 150px;
     height: 150px;
 }
-
-.navbar:hover {
-    background-color: midnightblue;
-}
-
-
 
 section {
     margin: 50px 0 70px 0;
@@ -104,13 +166,6 @@ h4 {
     float: right;
 }
 
-/*.contact-section-container {
-    background-color: dodgerblue;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-}*/
-
 .board {
     display: grid;
     margin: auto;
@@ -138,6 +193,7 @@ h4 {
     border: none;
     background-color: -moz-default-background-color;
     font-size: 60px;
+    color: #ffffff;
 }
 
 .game-info {
@@ -147,10 +203,9 @@ h4 {
 
 button {
     background-color: dodgerblue;
-    color: white;
     padding: 0.75rem;
-    border-color: slategrey;
     border-radius: 10px;
+    border: none;
 }
 
 #play-again-button:not([hidden]) {
@@ -208,60 +263,3 @@ footer {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-
-/*!* Styling for the contact form *!
-.contact-form-container {
-    padding: 20px;
-    box-shadow: 0 4px 8px slategrey;
-    max-width: 700px;
-}
-
-.contact-form-container h2 {
-    margin-top: 0;
-    text-align: center;
-}
-
-.form-item {
-    margin-bottom: 1rem;
-}
-
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-}
-
-input, textarea {
-    font-size: 1rem;
-    padding: 0.8rem;
-    border: 1px solid slategrey;
-    border-radius: 4px;
-    box-sizing: border-box;     !* rounds the corners *!
-    width: 100%;                !* fill the entire container *!
-}
-
-textarea {
-    font-family: "Nunito Sans", serif;
-    resize: vertical;
-    min-height: 3rem;
-    overflow: hidden;
-}
-
-.error-message {
-    color: indianred;
-    font-size: 0.875rem;
-    display: none;
-}
-
-.submit-button {
-    background-color: dodgerblue;
-    color: white;
-    padding: 0.75rem;
-    border-radius: 4px;
-    border-color: slategrey;
-    cursor: pointer;
-}
-
-.submit-button:hover {
-    background-color: midnightblue;
-}*/

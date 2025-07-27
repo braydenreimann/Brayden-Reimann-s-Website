@@ -19,6 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    const toggle = document.getElementById("navbar-mobile-toggle");
+    const bodyContent = document.getElementById("body-content");
+    
+    const mobileLinks = document.getElementById("navbar-mobile-links");
+    toggle.addEventListener("click", () => {
+        const isVisible = mobileLinks.style.display === "block";
+        mobileLinks.style.display = isVisible ? "none" : "block";
+        bodyContent.style.display = isVisible ? "none" : "block";
+    });
+
+    const mobileLinksButtons = document.querySelectorAll("a");
+
+    mobileLinksButtons.forEach(link => {
+        link.addEventListener("click", () => {
+            mobileLinks.style.display = "none";
+            bodyContent.style.display = "none";
+        });
+    });
+
+
     // Create a new HTMLAudioElement to manage and play audio
     const menuSelectSF = new Audio("Media/Audio/menu-select.wav");
     const youWonSF = new Audio("Media/Audio/you-won.wav");
