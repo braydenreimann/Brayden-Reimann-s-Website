@@ -42,6 +42,7 @@ body {
     z-index: 140;
     position: relative;
     margin-bottom: 1rem;
+    display: none;
 }
 
 #navbar-mobile-links {
@@ -82,13 +83,18 @@ body {
     .navbar-desktop {
         display: none;
     }
+
     .navbar-mobile {
         display: block;
     }
 
-    #navbar-mobile-links {
+    #navbar-mobile-toggle {
+        display: block;
+    }
+
+    #headshot {
         display: none;
-    } 
+    }
 }
 
 .introduction {
