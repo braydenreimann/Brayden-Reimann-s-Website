@@ -95,6 +95,10 @@ body {
     #headshot {
         display: none;
     }
+
+    #tic-tac-toe {
+        display: none;
+    }
 }
 
 .introduction {
