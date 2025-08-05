@@ -1,3 +1,5 @@
+/* HTML Elements */
+
 body {
     font-family: "Nunito Sans", serif;
     max-width: 700px;
@@ -6,6 +8,32 @@ body {
     background-color: #ffffff;
     color: #000000;
 }
+
+section {
+    margin: 50px 0 70px 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Rubik", serif;
+    font-weight: 500;
+}
+
+h3 {
+    color: #023047;
+}
+
+h4 {
+    color: #FB8500;
+}
+
+button {
+    background-color: dodgerblue;
+    padding: 0.75rem;
+    border-radius: 10px;
+    border: none;
+}
+
+/* Overlay for modal or mobile nav */
 
 #body-content {
     position: fixed;
@@ -18,6 +46,7 @@ body {
     display: none;
 }
 
+/* Desktop Navbar */
 .navbar-desktop {
     margin: 0 auto 3rem auto;
     padding: 0.75rem;
@@ -27,33 +56,49 @@ body {
     background-color: #219EBC;
     border-radius: 25px;
     border-color: slategrey;
-    background-color: midnightblue;
 }
+
+.navbar-desktop a {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar-desktop a:hover {
+    color: midnightblue;
+    font-weight: bold;
+}
+
+/* Mobile Navbar */
 
 .navbar-mobile {
     margin-bottom: 1rem;
     z-index: 120;
+    transition: color 0.3s ease;
 }
 
 #navbar-mobile-toggle {
     background-color: azure;
     font-size: 24px;
     border-radius: 15px;
-    z-index: 140;
     position: relative;
     margin-bottom: 1rem;
     display: none;
+    z-index: 140;
+    cursor: pointer;
 }
 
 #navbar-mobile-links {
-    background-color: #FB8500;
+    background-color: #219EBC;
     display: none;
     position: absolute;
     border-radius: 15px;
     font-size: 24px;
-            /* top right bottom left */
-    padding: 2rem 6rem 2rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
     z-index: 120;
+    width: 30%;
 }
 
 #navbar-mobile-links .unordered-list {
@@ -67,39 +112,15 @@ body {
 
 #navbar-mobile-links a {
     color: #ffffff;
+    text-decoration: none;
+}
+
+#navbar-mobile-links a:hover {
+    color: midnightblue;
     font-weight: bold;
-    text-decoration: none;
-    margin-bottom: 2rem;
 }
 
-.navbar-desktop a {
-    padding-left: 20px;
-    padding-right: 20px;
-    text-decoration: none;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .navbar-desktop {
-        display: none;
-    }
-
-    .navbar-mobile {
-        display: block;
-    }
-
-    #navbar-mobile-toggle {
-        display: block;
-    }
-
-    #headshot {
-        display: none;
-    }
-
-    #tic-tac-toe {
-        display: none;
-    }
-}
+/* Introduction section */
 
 .introduction {
     display: flex;
@@ -132,25 +153,10 @@ body {
     height: 150px;
 }
 
-section {
-    margin: 50px 0 70px 0;
-}
+/* Project section */
 
-.contact-section-container p {
-    margin: 0;
-}
-
-h1, h2, h3, h4 {
-    font-family: "Rubik", serif;
-    font-weight: 500;
-}
-
-h3 {
-    color: #023047;
-}
-
-h4 {
-    color: #FB8500;
+.project-item {
+    padding-bottom: 2em;
 }
 
 .project-img {
@@ -162,19 +168,55 @@ h4 {
     box-shadow: 10px 5px 5px lightgrey;
 }
 
-.project-item {
-    padding-bottom: 2em;
+/* Bookshelf section */
+
+.items-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Arial", sans-serif;
 }
 
-.icons img {
-    max-width: 30px;
-    padding: 3px;
-    height: auto;
+.items-container .item {
+    margin: 10px;
+    padding: 10px;
+    flex: 1;
+    flex-grow: 0;
 }
 
-#language-prompt {
-    float: right;
+.item h4 {
+    font-size: 14px;
+    margin-bottom: 0.5em;
+    width: 100%;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
+.item p {
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.items-container img {
+    max-width: 120px;
+    max-height: 100%;
+    border-radius: 10px;
+    transition: transorm 0.7s ease-in-out;
+}
+
+.items-container img:hover {
+    transform: rotate(-5deg);
+}
+
+.book-title {
+    overflow: hidden;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* Tic-tac-toe game */
 
 .board {
     display: grid;
@@ -201,7 +243,7 @@ h4 {
     color: black;
     border-radius: 10px;
     border: none;
-    background-color: -moz-default-background-color;
+    background-color: transparent;
     font-size: 60px;
     color: #ffffff;
 }
@@ -211,65 +253,47 @@ h4 {
     margin: 2em 0 1em 0;
 }
 
-button {
-    background-color: dodgerblue;
-    padding: 0.75rem;
-    border-radius: 10px;
-    border: none;
-}
-
 #play-again-button:not([hidden]) {
     margin: 2em auto 0 auto;
     display: block;
     background-color: seagreen;
 }
 
+/* Contact section and footer */
+.contact-section-container p {
+    margin: 0;
+}
+
 footer {
     margin-top: 100px;
 }
 
-/* Styling for my bookshelf section */
-.items-container {
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "Arial", sans-serif;
+/* Icons */
+.icons img {
+    max-width: 30px;
+    padding: 3px;
+    height: auto;
 }
 
-.items-container .item {
-    margin: 10px;
-    padding: 10px;
-    flex: 1;
-    flex-grow: 0;
-}
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .navbar-desktop {
+        display: none;
+    }
 
-.item h4 {
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin-bottom: 0.5em;
-    width: 100%;
-    font-size: 14px;
-}
+    .navbar-mobile {
+        display: block;
+    }
 
-.item p {
-    margin-top: 0;
-    font-size: 12px;
-}
+    #navbar-mobile-toggle {
+        display: block;
+    }
 
-.items-container img {
-    max-width: 120px;
-    max-height: 100%;
-    border-radius: 10px;
-    transition: transorm 0.7s ease-in-out;
-}
+    #headshot {
+        display: none;
+    }
 
-.items-container img:hover {
-    transform: rotate(-5deg);
-}
-
-.book-title {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    #tic-tac-toe {
+        display: none;
+    }
 }
