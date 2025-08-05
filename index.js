@@ -24,10 +24,21 @@ document.addEventListener("DOMContentLoaded", () => {
     
     const mobileLinks = document.getElementById("navbar-mobile-links");
     toggle.addEventListener("click", () => {
-        const isVisible = mobileLinks.style.display === "block";
+        const isVisible = getComputedStyle(mobileLinks).display === "block";
         mobileLinks.style.display = isVisible ? "none" : "block";
         bodyContent.style.display = isVisible ? "none" : "block";
     });
+
+    // Disable the small-window navigation bar when the screen is resized
+    window.addEventListener("resize", () => {
+        const mobileLinks = document.getElementById("navbar-mobile-links");
+        const bodyContent = document.getElementById("body-content");
+
+        if (window.innerWidth >= 768) {
+            mobileLinks.style.display = "none";
+            bodyContent.style.display = "none";
+        }
+    })
 
     const mobileLinksButtons = document.querySelectorAll("a");
 
@@ -37,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
             bodyContent.style.display = "none";
         });
     });
-
 
     // Create a new HTMLAudioElement to manage and play audio
     const menuSelectSF = new Audio("Media/Audio/menu-select.wav");
