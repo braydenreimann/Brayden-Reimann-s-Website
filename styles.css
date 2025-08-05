@@ -44,6 +44,7 @@ button {
     background-color: rgba(128, 128, 128, 0.4);
     z-index: 100;
     display: none;
+    transition: color 0.3s ease;
 }
 
 /* Desktop Navbar */
@@ -77,6 +78,7 @@ button {
     margin-bottom: 1rem;
     z-index: 120;
     transition: color 0.3s ease;
+    display: none;
 }
 
 #navbar-mobile-toggle {
@@ -294,6 +296,12 @@ footer {
     }
 
     #tic-tac-toe {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #body-content {
         display: none;
     }
 }
