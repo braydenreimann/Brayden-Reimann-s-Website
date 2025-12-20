@@ -1,27 +1,9 @@
 // Event listener to ensure page elements have loaded
 document.addEventListener("DOMContentLoaded", () => {
 
-
-    // Get the user's preferred language
-    const isEnglish = (document.documentElement.lang === "en");
-
-    if (!localStorage.langCheck) {
-        const preferredLang = navigator.language;
-        let preferSpanish = false;
-        if (preferredLang.charAt(0) === 'e' && preferredLang.charAt(1) === 's') {
-            preferSpanish = true;
-        }
-
-        // Switch to the Spanish version of the site
-        if (isEnglish && preferSpanish) {
-            window.location.href = "https://braydenreimann.com/es/"
-            localStorage.langCheck = 1;
-        }
-    }
-
     const toggle = document.getElementById("navbar-mobile-toggle");
     const bodyContent = document.getElementById("body-content");
-    
+
     const mobileLinks = document.getElementById("navbar-mobile-links");
     toggle.addEventListener("click", () => {
         const isVisible = getComputedStyle(mobileLinks).display === "block";
@@ -68,15 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Define the board (array of space objects)
     const board = [
-        { space: spaces[0], value: null},
-        { space: spaces[1], value: null},
-        { space: spaces[2], value: null},
-        { space: spaces[3], value: null},
-        { space: spaces[4], value: null},
-        { space: spaces[5], value: null},
-        { space: spaces[6], value: null},
-        { space: spaces[7], value: null},
-        { space: spaces[8], value: null}
+        { space: spaces[0], value: null },
+        { space: spaces[1], value: null },
+        { space: spaces[2], value: null },
+        { space: spaces[3], value: null },
+        { space: spaces[4], value: null },
+        { space: spaces[5], value: null },
+        { space: spaces[6], value: null },
+        { space: spaces[7], value: null },
+        { space: spaces[8], value: null }
     ]
 
     const winningPatterns = [
@@ -147,7 +129,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
 
         // Event listener for mouse leave (initial state)
-        space.addEventListener("mouseleave", () =>{
+        space.addEventListener("mouseleave", () => {
             if (yourTurn) {
                 space.style.backgroundColor = "";
             }
@@ -210,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const item = board[i];
 
             if (item.value === null) {
-                emptySpaces.push({ item, index: i});
+                emptySpaces.push({ item, index: i });
             }
         }
 
@@ -231,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
             char = 'O';
         }
 
-        switch(index) {
+        switch (index) {
             case 0:
                 if ((board[0].value === char)
                     && (board[3].value === char)
