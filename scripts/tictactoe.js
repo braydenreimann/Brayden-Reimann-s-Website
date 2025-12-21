@@ -1,35 +1,10 @@
-// Event listener to ensure page elements have loaded
+/* tictactoe.js */
+
 document.addEventListener("DOMContentLoaded", () => {
-
-    const toggle = document.getElementById("navbar-mobile-toggle");
-    const bodyContent = document.getElementById("body-content");
-
-    const mobileLinks = document.getElementById("navbar-mobile-links");
-    toggle.addEventListener("click", () => {
-        const isVisible = getComputedStyle(mobileLinks).display === "block";
-        mobileLinks.style.display = isVisible ? "none" : "block";
-        bodyContent.style.display = isVisible ? "none" : "block";
-    });
-
-    // Disable the small-window navigation bar when the screen is resized
-    window.addEventListener("resize", () => {
-        const mobileLinks = document.getElementById("navbar-mobile-links");
-        const bodyContent = document.getElementById("body-content");
-
-        if (window.innerWidth >= 768) {
-            mobileLinks.style.display = "none";
-            bodyContent.style.display = "none";
-        }
-    })
-
-    const mobileLinksButtons = document.querySelectorAll("a");
-
-    mobileLinksButtons.forEach(link => {
-        link.addEventListener("click", () => {
-            mobileLinks.style.display = "none";
-            bodyContent.style.display = "none";
-        });
-    });
+    const gameSection = document.getElementById("tic-tac-toe");
+    if (!gameSection) {
+        return;
+    }
 
     // Create a new HTMLAudioElement to manage and play audio
     const menuSelectSF = new Audio("Media/Audio/menu-select.wav");
@@ -46,7 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("space-6"),
         document.getElementById("space-7"),
         document.getElementById("space-8")
-    ]
+    ];
+
+    if (spaces.some((space) => !space)) {
+        return;
+    }
 
     // Define the board (array of space objects)
     const board = [
@@ -59,29 +38,13 @@ document.addEventListener("DOMContentLoaded", () => {
         { space: spaces[6], value: null },
         { space: spaces[7], value: null },
         { space: spaces[8], value: null }
-    ]
-
-    const winningPatterns = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6]
-    ]
-
-    function checkWin(player) {
-        return winningPatterns.some(pattern => pattern.every(index => board[index].value === player));
-    }
-
-    const emptySpacesIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
-    let numEmptySpaces = 9;
+    ];
 
     // Define the game info text
     const gameInfo = document.getElementById("game-info");
+    if (!gameInfo) {
+        return;
+    }
 
     // Define variable that indicates the current turn
     let yourTurn = true;
@@ -93,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const playAgainButton = document.getElementById("play-again-button");
     if (playAgainButton) {
         playAgainButton.addEventListener("click", () => {
-
             // Reset the game
             board[0].value = null;
             board[1].value = null;
@@ -105,41 +67,40 @@ document.addEventListener("DOMContentLoaded", () => {
             board[7].value = null;
             board[8].value = null;
 
-            spaces.forEach((space, index) => {
+            spaces.forEach((space) => {
                 space.innerHTML = "";
-            })
+            });
 
             isPlaying = true;
             yourTurn = true;
 
             playAgainButton.setAttribute("hidden", "hidden");
             gameInfo.innerHTML = "It's your turn.";
-        })
+        });
     }
 
     spaces.forEach((space, index) => {
-
         // Event listener for mouse enter
         space.addEventListener("mouseenter", () => {
             // Highlight available spaces
             if (yourTurn && board[index].value === null && isPlaying) {
                 space.style.backgroundColor = "LightGreen";
-                menuSelectSF.play().then(r => null);
+                menuSelectSF.play().then(() => null);
             }
-        })
+        });
 
         // Event listener for mouse leave (initial state)
         space.addEventListener("mouseleave", () => {
             if (yourTurn) {
                 space.style.backgroundColor = "";
             }
-        })
+        });
 
         // Event listener for mouse click
         space.addEventListener("click", () => {
             if (yourTurn && board[index].value === null) {
                 // Once the user selects the space, immediately remove highlight on the space
-                space.style.backgroundColor = ""
+                space.style.backgroundColor = "";
                 markSpace(space, index, true);
 
                 if (isPlaying) {
@@ -147,39 +108,44 @@ document.addEventListener("DOMContentLoaded", () => {
                     setTimeout(computerMove, 3000);
                     yourTurn = false;
                 } else {
-                    document.getElementById("play-again-button").removeAttribute("hidden");
+                    const button = document.getElementById("play-again-button");
+                    if (button) {
+                        button.removeAttribute("hidden");
+                    }
                 }
             }
-        })
-    })
+        });
+    });
 
     function markSpace(space, index, isX) {
         // Update the board
         if (isX) {
-            board[index].value = 'X';
-            space.innerHTML = 'X';
+            board[index].value = "X";
+            space.innerHTML = "X";
 
             const hasWon = checkIfWon(index, isX);
             if (hasWon) {
                 gameInfo.innerHTML = "You won!";
-                youWonSF.play().then(r => null);
+                youWonSF.play().then(() => null);
                 isPlaying = false;
             } else {
-                gameInfo.innerHTML = "It's the computer's turn."
+                gameInfo.innerHTML = "It's the computer's turn.";
             }
         } else {
-            board[index].value = 'O';
-            space.innerHTML = 'O';
-
+            board[index].value = "O";
+            space.innerHTML = "O";
 
             const hasWon = checkIfWon(index, isX);
             if (hasWon) {
                 gameInfo.innerHTML = "The computer won!";
-                youWonSF.play().then(r => null);
+                youWonSF.play().then(() => null);
                 isPlaying = false;
-                document.getElementById("play-again-button").removeAttribute("hidden");
+                const button = document.getElementById("play-again-button");
+                if (button) {
+                    button.removeAttribute("hidden");
+                }
             } else {
-                gameInfo.innerHTML = "It's your turn."
+                gameInfo.innerHTML = "It's your turn.";
             }
         }
     }
@@ -196,21 +162,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        console.log(emptySpaces);
         if (emptySpaces.length > 0) {
             const randomIndex = Math.floor(Math.random() * emptySpaces.length);
-            markSpace(emptySpaces[randomIndex].item.space, emptySpaces[randomIndex].index, false)
+            markSpace(emptySpaces[randomIndex].item.space, emptySpaces[randomIndex].index, false);
         }
 
         yourTurn = true;
     }
 
     function checkIfWon(index, isX) {
-        let char = -1;
+        let char = "O";
         if (isX) {
-            char = 'X';
-        } else {
-            char = 'O';
+            char = "X";
         }
 
         switch (index) {
@@ -312,8 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     && (board[7].value === char)
                     && (board[8].value === char)) {
                     return true;
-                }
-                else if ((board[1].value === char)
+                } else if ((board[1].value === char)
                     && (board[4].value === char)
                     && (board[7].value === char)) {
                     return true;
@@ -337,4 +299,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return false;
     }
-})
+});
