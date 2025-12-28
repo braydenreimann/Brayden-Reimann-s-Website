@@ -274,11 +274,6 @@ header {
     margin-bottom: 2rem;
 }
 
-#intro {
-    margin: 0;
-    color: var(--color-muted);
-}
-
 #name {
     margin: 0 0 0.5rem;
     color: var(--color-primary-dark);
