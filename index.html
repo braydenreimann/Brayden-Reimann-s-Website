@@ -27,9 +27,10 @@
             <nav>
                 <a data-text-id="a-1" href="">Home</a>
                 <a data-text-id="a-2" href="#about-me">About me</a>
-                <a data-text-id="a-3" href="#projects">Projects</a>
-                <a data-text-id="a-4" href="fun.html">Fun</a>
-                <a data-text-id="a-5"
+                <a data-text-id="a-3" href="#skills">Skills</a>
+                <a data-text-id="a-4" href="#projects">Projects</a>
+                <a data-text-id="a-5" href="fun.html">Fun</a>
+                <a data-text-id="a-6"
                     href="https://www.purdueexponent.org/search/?tncms_csrf_token=04f54da2b38977f742b2800a059a966ed2699677da69d77053370ccf621c9a8c.395a5a30b414cfaebc6e&l=25&s=start_time&sd=desc&nfl=ap&f=html&t=article%2Cvideo%2Cyoutube%2Ccollection&app=editorial&nsa=eedition&q=Brayden+Reimann">Articles</a>
             </nav>
         </div>
@@ -46,13 +47,16 @@
                         <a data-text-id="a-2" href="#about-me">About me</a>
                     </li>
                     <li>
-                        <a data-text-id="a-3" href="#projects">Projects</a>
+                        <a data-text-id="a-3" href="#skills">Skills</a>
                     </li>
                     <li>
-                        <a data-text-id="a-4" href="fun.html">Fun</a>
+                        <a data-text-id="a-4" href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a data-text-id="a-5"
+                        <a data-text-id="a-5" href="fun.html">Fun</a>
+                    </li>
+                    <li>
+                        <a data-text-id="a-6"
                             href="https://www.purdueexponent.org/search/?tncms_csrf_token=04f54da2b38977f742b2800a059a966ed2699677da69d77053370ccf621c9a8c.395a5a30b414cfaebc6e&l=25&s=start_time&sd=desc&nfl=ap&f=html&t=article%2Cvideo%2Cyoutube%2Ccollection&app=editorial&nsa=eedition&q=Brayden+Reimann">Articles</a>
                     </li>
                 </ul>
@@ -63,10 +67,10 @@
 
         <div class="introduction">
             <img id="headshot" src="Media/images/thumbnail_headshot.jpg" width="1920" height="1828"
-                alt="A photo of Brayden Reimann, who may be the most qualified candidate for a software development internship position.">
+                alt="A photo of Brayden Reimann">
             <div class="name-title-socials-section">
                 <h1 id="name" data-text-id="h1-1">Brayden Reimann</h1>
-                <h3 id="title" data-text-id="h3-1">CS @ Purdue | Full-stack Software Developer Intern</h3>
+                <h3 id="title" data-text-id="h3-1">CS @ Purdue | Full-stack Software Developer</h3>
                 <div class="icons">
                     <a href="https://github.com/braydenreimann"> <img alt="Github Logo" src="Media/Socials/github.png"
                             width="640" height="640"></a>
@@ -86,43 +90,90 @@
         <p id="about-me-p5">I’m motivated by building thoughtful, user-centered software and am excited to apply my skills to develop products that meaningfully improve people’s lives.</p>
     </section>
 
-    <section id="languages-and-tools">
-        <h2>Languages and Tools</h2>
-        <h3>Languages</h3>
-        <div class="icons">
-            <img src="Media/Languages/html.png" alt="HTML Icon" loading="lazy" width="512" height="512">
-            <img src="Media/Languages/css-3.png" alt="CSS Icon" loading="lazy" width="512" height="512">
-            <img src="Media/Languages/js.png" alt="Javascript Icon" loading="lazy" width="512" height="512">
-            <img src="Media/Languages/C_Programming_Language.svg.png" alt="C Programming Language Icon" loading="lazy"
-                width="1853" height="2049">
-            <img src="Media/Languages/C++.png" alt="C++ Icon" loading="lazy" width="1200" height="1351">
-            <img src="Media/Languages/csharp.png" alt="C# Icon" loading="lazy" width="384" height="432">
-            <img src="Media/Languages/java.png" alt="Java Icon" loading="lazy" width="512" height="512">
-            <img src="Media/Languages/asm.png" alt="Assembly Icon" loading="lazy" width="1024" height="1024">
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Programming languages</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <img src="Media/Tools/c-sharp.png" alt="C#">
+                        <span>C#</span>
+                    </li>
+                    <li class="skill-item">
+                        <img src="Media/Tools/c.png" alt="C">
+                        <span>C</span>
+                    </li>
+                    <li class="skill-item">
+                        <img src="Media/Tools/C++.png" alt="C++">
+                        <span>C++</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Frameworks &amp; Libraries</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <img src="Media/Tools/net-logo.png" alt="ASP.NET Core">
+                        <span>ASP.NET Core</span>
+                    </li>
+                    <li class="skill-item">
+                        <img src="Media/Tools/blazor.png" alt="Blazor">
+                        <span>Blazor</span>
+                    </li>
+                    <li class="skill-item">
+                        <img src="Media/Tools/react.png" alt="React Native (Expo)">
+                        <span>React Native (Expo)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Cloud &amp; Infrastructure</h3>
+                <ul class="skill-list">
+                    <li class="skill-item skill-item--dropdown">
+                        <details>
+                            <summary>
+                                <img src="Media/Tools/azure.png" alt="Microsoft Azure">
+                                <span>Microsoft Azure</span>
+                                <span class="skill-count" aria-label="4 Azure services">(4)</span>
+                                <span class="skill-chevron" aria-hidden="true"></span>
+                            </summary>
+                            <ul class="subskill-list">
+                                <li>Cosmos DB</li>
+                                <li>Blob Storage</li>
+                                <li>Functions</li>
+                                <li>Service Bus</li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li class="skill-item">
+                        <img src="Media/Tools/docker.jpg" alt="Docker">
+                        <span>Docker</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Tools &amp; Technologies</h3>
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <img src="Media/Tools/github-mark.png" alt="Git/GitHub">
+                        <span>Git/GitHub</span>
+                    </li>
+                    <li class="skill-item">
+                        <img src="Media/Tools/linux.png" alt="Linux">
+                        <span>Linux</span>
+                    </li>
+                    <li class="skill-item">
+                        <img src="Media/Tools/bash.png" alt="Bash">
+                        <span>Bash</span>
+                    </li>
+                    <li class="skill-item">
+                        <img src="Media/Tools/chatgpt.svg" alt="Codex">
+                        <span>Codex</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p>My projects span front-end interfaces, API development, and database integration, and more, giving me real
-            experience with production-grade software systems.</p>
-        <h3>Tools</h3>
-        <div class="icons">
-            <img alt="Azure Icon" src="Media/Tools/azure.png" loading="lazy" width="3000" height="3000">
-            <img alt="Blazor Icon" src="Media/Tools/blazor.png" loading="lazy" width="1000" height="1000">
-            <img alt="Cosmos DB Icon" src="Media/Tools/cosmos.png" loading="lazy" width="1200" height="1200">
-            <img alt="ChatGPT Icon" src="Media/Tools/chatgpt.png" loading="lazy" width="2048" height="2048">
-            <img alt="Copilot Icon" src="Media/Tools/copilot.png" loading="lazy" width="512" height="512">
-            <img alt="GitHub Icon" src="Media/Tools/github.png" loading="lazy" width="512" height="512">
-            <img alt="Azure Devops Icon" src="Media/Tools/devops.png" loading="lazy" width="300" height="300">
-            <img alt="Windows Icon" src="Media/Tools/windows.png" loading="lazy" width="255" height="256">
-            <img alt="Linux Icon" src="Media/Tools/linux.png" loading="lazy" width="2400" height="2793">
-            <img alt="MacOS Icon" src="Media/Tools/macos.png" loading="lazy" width="1200" height="1200">
-            <img alt="Visual Studio Icon" src="Media/Tools/visual_studio.png" loading="lazy" width="1200" height="1200">
-            <img alt="IntelliJ Icon" src="Media/Tools/intellij.png" loading="lazy" width="1200" height="1200">
-            <img alt="Webstorm Icon" src="Media/Tools/webstorm.png" loading="lazy" width="256" height="256">
-            <img alt="Vim Icon" src="Media/Tools/vim.png" loading="lazy" width="767" height="768">
-        </div>
-        <p>I regularly work with tools like Azure, Blazor, Cosmos DB, and Azure DevOps to build and deploy scalable and
-            cloud-native solutions.</p>
-        <p>In addition, by utilizing tools AI tools like ChatGPT and Microsoft Copilot, I can now develop faster and
-            more effectively than what was possible before.</p>
     </section>
 
     <section id="projects">
